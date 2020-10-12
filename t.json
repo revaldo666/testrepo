@@ -1,12 +1,12 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Parts and Pricing API",
+    "title": "Parts and Pricing API ",
     "version": "v1"
   },
   "servers": [
     {
-      "url": "/Api"
+      "url": "https://pricingapi.teklynx.com"
     }
   ],
   "paths": {
