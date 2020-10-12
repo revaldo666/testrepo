@@ -208,11 +208,6 @@
         "requestBody": {
           "description": "The data.",
           "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CalculatePriceRequest"
-              }
-            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CalculatePriceRequest"
