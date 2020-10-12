@@ -30,6 +30,323 @@
         }
       }
     },
+    "/api/Email/sendQuoteMessage": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "summary": "Sends the quote message.",
+        "requestBody": {
+          "description": "The data.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/saveQuotePdf": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "summary": "Saves the quote PDF.",
+        "requestBody": {
+          "description": "The data.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/sendComparedQuote": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "summary": "Sends the compared quote.",
+        "requestBody": {
+          "description": "The data.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/saveComparedQuotePdf": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "summary": "Saves the compared quote PDF.",
+        "requestBody": {
+          "description": "The data.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/printComparedQuotePdf": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "summary": "Prints the compared quote PDF.",
+        "requestBody": {
+          "description": "The data.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/printQuotePdf": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "summary": "Prints the quote PDF.",
+        "requestBody": {
+          "description": "The data.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/sendAddonMessage": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "summary": "Sends the addon message.",
+        "requestBody": {
+          "description": "The data.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionModelDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionModelDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionModelDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionModelDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Product/getexistinglicenseinfo/{license}": {
       "get": {
         "tags": [
@@ -395,74 +712,96 @@
         "type": "object",
         "properties": {
           "ShowLinePrice": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether [show line price]."
           },
           "ShowEmptyLine": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether [show empty line]."
           },
           "ShowLineMessage": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether [show line message]."
           },
           "IsExisting": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is existing."
           },
           "LicenseNumber": {
             "type": "string",
+            "description": "Gets or sets the license number.",
             "nullable": true
           },
           "SmaNumber": {
             "type": "string",
+            "description": "Gets or sets the sma number.",
             "nullable": true
           },
           "SmaStatus": {
             "type": "string",
+            "description": "Gets or sets the sma status.",
             "nullable": true
           },
           "SmaMessage": {
             "type": "string",
+            "description": "Gets or sets the sma message.",
             "nullable": true
           },
           "HasActiveSma": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance has active sma."
           },
           "SmaExist": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether [sma exist]."
           },
           "IsSubSma": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is sub sma."
           },
           "ShowSubscriptionPrice": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether [show subscription price]."
           },
           "ShowSmaSubscription": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether [show sma subscription]."
           },
           "IsRenewal": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is renewal."
           },
           "IsPerpetual": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is perpetual."
           },
           "IsClosedSma": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is closed sma."
           },
           "IsDifferentVersion": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is different version."
           },
           "ShowUpgrades": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether [show upgrades]."
           },
           "IsAddon": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is addon."
           },
           "IsSelectedVersionLover": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is selected version lover."
           },
           "IsPartialUpgrade": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is partial upgrade."
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Price result data transfering object"
       },
       "OptionDto": {
         "type": "object",
@@ -579,22 +918,27 @@
         "properties": {
           "Name": {
             "type": "string",
+            "description": "Gets or sets the name.",
             "nullable": true
           },
           "Email": {
             "type": "string",
+            "description": "Gets or sets the email.",
             "nullable": true
           },
           "Phone": {
             "type": "string",
+            "description": "Gets or sets the phone.",
             "nullable": true
           },
           "IpAddress": {
             "type": "string",
+            "description": "Gets or sets the ip address.",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "User information data transfering object"
       },
       "SessionModelDto": {
         "type": "object",
@@ -670,28 +1014,35 @@
         "properties": {
           "SmaNumber": {
             "type": "string",
+            "description": "Gets or sets the sma number.",
             "nullable": true
           },
           "SmaStatus": {
             "type": "string",
+            "description": "Gets or sets the sma status.",
             "nullable": true
           },
           "StartDate": {
             "type": "string",
+            "description": "Gets or sets the start date.",
             "nullable": true
           },
           "EndDate": {
             "type": "string",
+            "description": "Gets or sets the end date.",
             "nullable": true
           },
           "IsExpired": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is expired."
           },
           "IsFakeSma": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether this instance is fake sma."
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "SMA data transfering object"
       },
       "ExistingProductDto": {
         "type": "object",
@@ -829,6 +1180,7 @@
                 "$ref": "#/components/schemas/OptionDto"
               }
             },
+            "description": "Gets or sets the options.",
             "nullable": true
           },
           "Displays": {
@@ -836,6 +1188,7 @@
             "items": {
               "$ref": "#/components/schemas/DisplaysDto"
             },
+            "description": "Gets or sets the displays.",
             "nullable": true
           },
           "ExistingModel": {
@@ -852,14 +1205,17 @@
             "items": {
               "type": "string"
             },
+            "description": "Gets or sets the send to.",
             "nullable": true
           },
           "RecipientName": {
             "type": "string",
+            "description": "Gets or sets the name of the recipient.",
             "nullable": true
           },
           "LicenseNumber": {
             "type": "string",
+            "description": "Gets or sets the license number.",
             "nullable": true
           },
           "SendFrom": {
@@ -867,6 +1223,7 @@
             "items": {
               "type": "string"
             },
+            "description": "Gets or sets the send from.",
             "nullable": true
           },
           "CC": {
@@ -874,18 +1231,22 @@
             "items": {
               "type": "string"
             },
+            "description": "Gets or sets the cc.",
             "nullable": true
           },
           "Message": {
             "type": "string",
+            "description": "Gets or sets the message.",
             "nullable": true
           },
           "QuoteType": {
             "type": "string",
+            "description": "Gets or sets the type of the quote.",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "The quote sending data trasfering object"
       },
       "EmailResponseDto": {
         "type": "object",
@@ -921,56 +1282,69 @@
         "properties": {
           "ProductId": {
             "type": "integer",
+            "description": "Gets or sets the product identifier.",
             "format": "int32"
           },
           "ProductName": {
             "type": "string",
+            "description": "Gets or sets the name of the product.",
             "nullable": true
           },
           "NameTranslation": {
             "type": "string",
+            "description": "Gets or sets the name translation.",
             "nullable": true
           },
           "DescriptionTranslation": {
             "type": "string",
+            "description": "Gets or sets the description translation.",
             "nullable": true
           },
           "Code": {
             "type": "string",
+            "description": "Gets or sets the code.",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Product data transfering object"
       },
       "ProductEditionDto": {
         "type": "object",
         "properties": {
           "ProductEditionId": {
             "type": "integer",
+            "description": "Gets or sets the product edition identifier.",
             "format": "int32"
           },
           "EditionName": {
             "type": "string",
+            "description": "Gets or sets the name of the edition.",
             "nullable": true
           },
           "Code": {
             "type": "string",
+            "description": "Gets or sets the code.",
             "nullable": true
           },
           "NameTranslation": {
             "type": "string",
+            "description": "Gets or sets the name translation.",
             "nullable": true
           },
           "DescriptionTranslation": {
             "type": "string",
+            "description": "Gets or sets the description translation.",
             "nullable": true
           },
           "Level": {
             "type": "integer",
+            "description": "Gets or sets the availability level.",
             "format": "int32"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Product edition data transfering object"
       },
       "AddonDto": {
         "type": "object",
