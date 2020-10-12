@@ -1,0 +1,1546 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "PPT API",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "/Api"
+    }
+  ],
+  "paths": {
+    "/api/Common/releaseNotes": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReleaseNotesResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReleaseNotesResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReleaseNotesResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/sendQuoteMessage": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/saveQuotePdf": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/sendComparedQuote": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/saveComparedQuotePdf": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/printComparedQuotePdf": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComparedQuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/printQuotePdf": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteSendDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Email/sendAddonMessage": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionModelDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionModelDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionModelDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionModelDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmailResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/getexistinglicenseinfo/{license}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "license",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExistingProductDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExistingProductDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExistingProductDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/getConfigurations": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/getexistingproductinfo/{productid}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "productid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetProductInformation1Response"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetProductInformation1Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetProductInformation1Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/getall": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/getproductEditions/{code}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductEditionDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductEditionDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductEditionDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/getAddons/{code}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AddonDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AddonDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AddonDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/calculateLicenses": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalculatePriceRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalculatePriceRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalculatePriceRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalculatePriceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/getalllicenses": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LicenseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LicenseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LicenseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/getalldeliveries": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DeliveryDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DeliveryDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DeliveryDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Value": {
+      "get": {
+        "tags": [
+          "Value"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ReleaseNotesResponseDto": {
+        "type": "object",
+        "properties": {
+          "Notes": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PriceResult": {
+        "type": "object",
+        "properties": {
+          "ShowLinePrice": {
+            "type": "boolean"
+          },
+          "ShowEmptyLine": {
+            "type": "boolean"
+          },
+          "ShowLineMessage": {
+            "type": "boolean"
+          },
+          "IsExisting": {
+            "type": "boolean"
+          },
+          "LicenseNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "SmaNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "SmaStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "SmaMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "HasActiveSma": {
+            "type": "boolean"
+          },
+          "SmaExist": {
+            "type": "boolean"
+          },
+          "IsSubSma": {
+            "type": "boolean"
+          },
+          "ShowSubscriptionPrice": {
+            "type": "boolean"
+          },
+          "ShowSmaSubscription": {
+            "type": "boolean"
+          },
+          "IsRenewal": {
+            "type": "boolean"
+          },
+          "IsPerpetual": {
+            "type": "boolean"
+          },
+          "IsClosedSma": {
+            "type": "boolean"
+          },
+          "IsDifferentVersion": {
+            "type": "boolean"
+          },
+          "ShowUpgrades": {
+            "type": "boolean"
+          },
+          "IsAddon": {
+            "type": "boolean"
+          },
+          "IsSelectedVersionLover": {
+            "type": "boolean"
+          },
+          "IsPartialUpgrade": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionDto": {
+        "type": "object",
+        "properties": {
+          "Identifier": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "RelationIndentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "BasePrice": {
+            "type": "string",
+            "nullable": true
+          },
+          "TotalPrice": {
+            "type": "string",
+            "nullable": true
+          },
+          "Level": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsGroup": {
+            "type": "boolean"
+          },
+          "FullDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "ListOption": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OptionDto"
+            },
+            "nullable": true
+          },
+          "Year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsAddon": {
+            "type": "boolean"
+          },
+          "UpgradeWarning": {
+            "type": "boolean"
+          },
+          "SavePrice": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsSma": {
+            "type": "boolean"
+          },
+          "NoPrice": {
+            "type": "boolean"
+          },
+          "PriceResult": {
+            "$ref": "#/components/schemas/PriceResult"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DisplaysDto": {
+        "type": "object",
+        "properties": {
+          "Index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsShown": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserInfoDto": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Email": {
+            "type": "string",
+            "nullable": true
+          },
+          "Phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "IpAddress": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SessionModelDto": {
+        "type": "object",
+        "properties": {
+          "CurrentFlow": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SelectedProduct": {
+            "type": "string",
+            "nullable": true
+          },
+          "SelectedEdition": {
+            "type": "string",
+            "nullable": true
+          },
+          "SelectedLicense": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "SelectedDelivery": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfUsers": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SelectedAddons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "UserInfo": {
+            "$ref": "#/components/schemas/UserInfoDto"
+          },
+          "HasActiveSma": {
+            "type": "boolean"
+          },
+          "ForVersion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CurrentVersion": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsIndividual": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SmaDataDto": {
+        "type": "object",
+        "properties": {
+          "SmaNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "SmaStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsExpired": {
+            "type": "boolean"
+          },
+          "IsFakeSma": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExistingProductDto": {
+        "type": "object",
+        "properties": {
+          "Current": {
+            "$ref": "#/components/schemas/SessionModelDto"
+          },
+          "SerialNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "Version": {
+            "type": "string",
+            "nullable": true
+          },
+          "ProductName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Edition": {
+            "type": "string",
+            "nullable": true
+          },
+          "Region": {
+            "type": "string",
+            "nullable": true
+          },
+          "LicenseType": {
+            "type": "string",
+            "nullable": true
+          },
+          "DaysRemaining": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "UsersCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VM": {
+            "type": "boolean"
+          },
+          "FromSubscription": {
+            "type": "boolean"
+          },
+          "FromHardKey": {
+            "type": "boolean"
+          },
+          "FromVersion": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "FromOnline": {
+            "type": "boolean"
+          },
+          "DisabledLicenses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "IsInRange": {
+            "type": "boolean"
+          },
+          "HelpPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "HasSmaInfo": {
+            "type": "boolean"
+          },
+          "SmaInfo": {
+            "$ref": "#/components/schemas/SmaDataDto"
+          },
+          "Addons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "IsSubscriptionActive": {
+            "type": "boolean"
+          },
+          "IsTestLicense": {
+            "type": "boolean"
+          },
+          "IsReturned": {
+            "type": "boolean"
+          },
+          "LicenseStatus": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuoteSendDto": {
+        "type": "object",
+        "properties": {
+          "Options": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/OptionDto"
+              }
+            },
+            "nullable": true
+          },
+          "Displays": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisplaysDto"
+            },
+            "nullable": true
+          },
+          "ExistingModel": {
+            "$ref": "#/components/schemas/ExistingProductDto"
+          },
+          "CurrentModel": {
+            "$ref": "#/components/schemas/SessionModelDto"
+          },
+          "PriceResult": {
+            "$ref": "#/components/schemas/PriceResult"
+          },
+          "SendTo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "RecipientName": {
+            "type": "string",
+            "nullable": true
+          },
+          "LicenseNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "SendFrom": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "CC": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuoteType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmailResponseDto": {
+        "type": "object",
+        "properties": {
+          "Success": {
+            "type": "boolean"
+          },
+          "ErrorMsg": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComparedQuoteSendDto": {
+        "type": "object",
+        "properties": {
+          "MasterProduct": {
+            "$ref": "#/components/schemas/QuoteSendDto"
+          },
+          "ComparedProduct": {
+            "$ref": "#/components/schemas/QuoteSendDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetProductInformation1Response": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "ProductDto": {
+        "type": "object",
+        "properties": {
+          "ProductId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ProductName": {
+            "type": "string",
+            "nullable": true
+          },
+          "NameTranslation": {
+            "type": "string",
+            "nullable": true
+          },
+          "DescriptionTranslation": {
+            "type": "string",
+            "nullable": true
+          },
+          "Code": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductEditionDto": {
+        "type": "object",
+        "properties": {
+          "ProductEditionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "EditionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "NameTranslation": {
+            "type": "string",
+            "nullable": true
+          },
+          "DescriptionTranslation": {
+            "type": "string",
+            "nullable": true
+          },
+          "Level": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddonDto": {
+        "type": "object",
+        "properties": {
+          "AddonId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "AddonName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "NameTranslation": {
+            "type": "string",
+            "nullable": true
+          },
+          "DescriptionTranslation": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CalculatePriceRequest": {
+        "type": "object",
+        "properties": {
+          "Model": {
+            "$ref": "#/components/schemas/SessionModelDto"
+          },
+          "Existing": {
+            "$ref": "#/components/schemas/ExistingProductDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CalculationResult": {
+        "type": "object",
+        "properties": {
+          "Options": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/OptionDto"
+              }
+            },
+            "nullable": true
+          },
+          "PriceResult": {
+            "$ref": "#/components/schemas/PriceResult"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LicenseWorkflowDto": {
+        "type": "object",
+        "properties": {
+          "OriginalLicenseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "RelatedLicenseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "OriginalChecked": {
+            "type": "boolean"
+          },
+          "RelatedEnabled": {
+            "type": "boolean"
+          },
+          "OriginalEdition": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LicenseDto": {
+        "type": "object",
+        "properties": {
+          "LicenseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsCheckable": {
+            "type": "boolean"
+          },
+          "NameTranslation": {
+            "type": "string",
+            "nullable": true
+          },
+          "DescriptionTranslation": {
+            "type": "string",
+            "nullable": true
+          },
+          "LicenseWorkflow": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LicenseWorkflowDto"
+            },
+            "nullable": true
+          },
+          "HasSpecialWorkflow": {
+            "type": "boolean"
+          },
+          "CheckedByDefault": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryWorkflowDto": {
+        "type": "object",
+        "properties": {
+          "DeliveryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "LicenseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Disabled": {
+            "type": "boolean"
+          },
+          "OriginalEdition": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryDto": {
+        "type": "object",
+        "properties": {
+          "DeliveryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "DeliveryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "NameTranslation": {
+            "type": "string",
+            "nullable": true
+          },
+          "DeliveryWorkflow": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeliveryWorkflowDto"
+            },
+            "nullable": true
+          },
+          "HasSpecialWorkflow": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
