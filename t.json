@@ -86,6 +86,45 @@
         }
       }
     },
+    "/api/Product/getexistingproductinfo/{productid}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "summary": "Gets the existing license information.",
+        "parameters": [
+          {
+            "name": "productid",
+            "in": "path",
+            "description": "The productid.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "The productid.",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetProductInformation1Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/api/Product/getall": {
       "get": {
         "tags": [
@@ -214,16 +253,6 @@
               }
             },
             "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CalculatePriceRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CalculatePriceRequest"
-              }
-            },
-            "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/CalculatePriceRequest"
               }
@@ -566,12 +595,14 @@
           "SelectedProduct": {
             "type": "string",
             "description": "Gets or sets the selected product.",
-            "nullable": true
+            "nullable": true,
+            "example": "\"CS\" | \"LV\" | \"LM\""
           },
           "SelectedEdition": {
             "type": "string",
             "description": "Gets or sets the selected edition.",
-            "nullable": true
+            "nullable": true,
+            "example": "\"PRO\" | \"GLD\" | \"ENT\""
           },
           "SelectedLicense": {
             "type": "array",
@@ -584,12 +615,14 @@
           "SelectedDelivery": {
             "type": "string",
             "description": "Gets or sets the selected delivery.",
-            "nullable": true
+            "nullable": true,
+            "example": "\"BOX\" | \"EL\""
           },
           "NumberOfUsers": {
             "type": "integer",
             "description": "Gets or sets the number of users.",
-            "format": "int32"
+            "format": "int32",
+            "example": 1
           },
           "SelectedAddons": {
             "type": "array",
@@ -609,12 +642,14 @@
           "ForVersion": {
             "type": "integer",
             "description": "Gets or sets for version.",
-            "format": "int32"
+            "format": "int32",
+            "example": 8
           },
           "CurrentVersion": {
             "type": "string",
             "description": "Gets or sets the current version.",
-            "nullable": true
+            "nullable": true,
+            "example": "8.60"
           },
           "IsIndividual": {
             "type": "boolean",
