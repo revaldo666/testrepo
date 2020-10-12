@@ -40,11 +40,11 @@
           {
             "name": "license",
             "in": "path",
-            "description": "The license code.",
+            "description": "The license code. <example>NSPN1234</example>",
             "required": true,
             "schema": {
               "type": "string",
-              "description": "The license code.",
+              "description": "The license code. <example>NSPN1234</example>",
               "nullable": true
             }
           }
@@ -86,45 +86,6 @@
         }
       }
     },
-    "/api/Product/getexistingproductinfo/{productid}": {
-      "get": {
-        "tags": [
-          "Product"
-        ],
-        "summary": "Gets the existing license information.",
-        "parameters": [
-          {
-            "name": "productid",
-            "in": "path",
-            "description": "The productid.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "description": "The productid.",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetProductInformation1Response"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "500": {
-            "description": "Server Error"
-          }
-        }
-      }
-    },
     "/api/Product/getall": {
       "get": {
         "tags": [
@@ -159,16 +120,16 @@
         "tags": [
           "Product"
         ],
-        "summary": "Gets all products.",
+        "summary": "Gets all products editions.",
         "parameters": [
           {
             "name": "code",
             "in": "path",
-            "description": "The code.",
+            "description": "The code. <example>CS</example>",
             "required": true,
             "schema": {
               "type": "string",
-              "description": "The code.",
+              "description": "The code. <example>CS</example>",
               "nullable": true
             }
           }
@@ -206,11 +167,11 @@
           {
             "name": "code",
             "in": "path",
-            "description": "The product code.",
+            "description": "The product code. <example>CS</example>",
             "required": true,
             "schema": {
               "type": "string",
-              "description": "The product code.",
+              "description": "The product code. <example>CS</example>",
               "nullable": true
             }
           }
@@ -333,6 +294,35 @@
           },
           "500": {
             "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/api/Value": {
+      "get": {
+        "tags": [
+          "Value"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       }
@@ -594,13 +584,13 @@
           },
           "SelectedProduct": {
             "type": "string",
-            "description": "Gets or sets the selected product.",
+            "description": "Gets or sets the selected product. <example>\"CS\" | \"LV\" | \"LM\"</example>",
             "nullable": true,
             "example": "\"CS\" | \"LV\" | \"LM\""
           },
           "SelectedEdition": {
             "type": "string",
-            "description": "Gets or sets the selected edition.",
+            "description": "Gets or sets the selected edition. <example>\"PRO\" | \"GLD\" | \"ENT\"</example>",
             "nullable": true,
             "example": "\"PRO\" | \"GLD\" | \"ENT\""
           },
@@ -609,18 +599,18 @@
             "items": {
               "type": "string"
             },
-            "description": "Gets or sets the selected license.",
+            "description": "Gets or sets the selected license. <example>\"SKL\" | \"PKL\" | \"PUK\"</example>",
             "nullable": true
           },
           "SelectedDelivery": {
             "type": "string",
-            "description": "Gets or sets the selected delivery.",
+            "description": "Gets or sets the selected delivery. <example>\"BOX\" | \"EL\"</example>",
             "nullable": true,
             "example": "\"BOX\" | \"EL\""
           },
           "NumberOfUsers": {
             "type": "integer",
-            "description": "Gets or sets the number of users.",
+            "description": "Gets or sets the number of users. <example>1</example>",
             "format": "int32",
             "example": 1
           },
@@ -629,7 +619,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Gets or sets the selected addons.",
+            "description": "Gets or sets the selected addons. <example>\"CPS\"</example>",
             "nullable": true
           },
           "UserInfo": {
@@ -641,13 +631,13 @@
           },
           "ForVersion": {
             "type": "integer",
-            "description": "Gets or sets for version.",
+            "description": "Gets or sets for version. <example>8</example>",
             "format": "int32",
             "example": 8
           },
           "CurrentVersion": {
             "type": "string",
-            "description": "Gets or sets the current version.",
+            "description": "Gets or sets the current version. <example>8.60</example>",
             "nullable": true,
             "example": "8.60"
           },
@@ -742,7 +732,7 @@
           },
           "VM": {
             "type": "boolean",
-            "description": "Gets or sets a value indicating whether this PartsAndPricingTool.Core.Dto.ExistingProductDto is vm."
+            "description": "Gets or sets a value indicating whether this product is vm."
           },
           "FromSubscription": {
             "type": "boolean",
